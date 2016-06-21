@@ -18,4 +18,4 @@ from gcloud.monitoring import Aligner, Reducer
 from ._metric import MetricDescriptors
 from ._resource import ResourceDescriptors
 from ._query import Query
-from ._query_result import QueryResult
+from ._query_result import QueryResults
