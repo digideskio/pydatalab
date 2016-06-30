@@ -14,6 +14,8 @@
 
 from __future__ import absolute_import
 
+import collections
+
 import gcloud.monitoring
 
 import datalab.context
@@ -26,3 +28,15 @@ def make_client(project_id=None, context=None):
       project=project_id,
       credentials=context.credentials,
   )
+
+
+def listify(value):
+  """If value is a string, convert to a list of one element."""
+  if value is None:
+    return []
+  elif isinstance(value, basestring):
+    return [value]
+  elif isinstance(value, collections.Iterable):
+    return value
+  else:
+    raise TypeError('"value" must be a string or an iterable')
