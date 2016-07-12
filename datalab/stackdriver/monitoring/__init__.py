@@ -16,7 +16,7 @@ from __future__ import absolute_import
 
 from gcloud.monitoring import Aligner, Reducer
 from ._metric import MetricDescriptors
-from ._resource import ResourceDescriptors
 from ._query import Query, TimeInterval
 from ._query_results import QueryResults
+from ._resource import ResourceDescriptors
 from ._visualization import plot_query_results
